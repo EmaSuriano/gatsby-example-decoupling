@@ -10,8 +10,8 @@ export const defaultNavItems: NavItem[] = [
     show: Show.Always,
   },
   {
-    item: <Link to="/projects">Projects</Link>,
-    key: "/projects",
+    item: <Link to="/achievements">Achievements</Link>,
+    key: "/achievements",
     show: Show.Always,
   },
 ]

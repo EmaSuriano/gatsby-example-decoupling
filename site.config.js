@@ -7,22 +7,20 @@ module.exports = Object.freeze({
   siteMetadata: {
     title: "AxoCare NGO",
     titleShort: "AC",
-    tag: "Axolotls are first",
+    tag: "Where Axolotls are first",
     description:
       "AxoCare is the first fake NGO to save Axolotl from extinction.",
     siteUrl: "http://localhost:8000",
     logo: path.resolve(__dirname, "src/images/logo.png"),
-    contactEmail: "team@projectunicorn.dev",
-    royEmail: "roy.moran@projectunicorn.dev",
     author: "EmaSuriano",
     social: {
       twitter: "@emasuriano",
     },
   },
   manifestOptions: {
-    name: "Project Unicorn",
-    short_name: "Project Unicorn",
-    start_url: "/projects",
+    name: "AxoCare NGO",
+    short_name: "AxoCare NGO",
+    start_url: "/",
     background_color: "#ffffff",
     theme_color: "#ffffff",
     display: "minimal-ui",

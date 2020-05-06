@@ -1,9 +1,9 @@
-import React, { FC, useRef } from 'react';
-import Slider from 'react-slick';
-import styled from 'styled-components';
+import React, { FC, useRef } from "react"
+import Slider from "react-slick"
+import styled from "styled-components"
 
-import Card from './card';
-import { content } from './content';
+import Card from "./card"
+import { content } from "./content"
 
 const Wrapper = styled.section`
   background-color: ${({ theme }) => theme.colors.section};
@@ -13,19 +13,19 @@ const Wrapper = styled.section`
   @media screen and (max-width: ${({ theme }) => theme.sizes.width.small}) {
     padding: ${({ theme }) => theme.boxes.padding.section.small};
   }
-`;
+`
 
 const Heading = styled.h2`
   text-align: center;
   padding: 1em;
-`;
+`
 
 const Testimonial: FC = () => {
-  const ref = useRef<Slider | null>(null);
+  const ref = useRef<Slider | null>(null)
 
   return (
     <Wrapper>
-      <Heading>What developers say...</Heading>
+      <Heading>What people say...</Heading>
       <Slider
         autoplay
         autoplaySpeed={5000}
@@ -35,7 +35,7 @@ const Testimonial: FC = () => {
         vertical={false}
         slidesToScroll={3}
         slidesToShow={3}
-        ref={(v) => (ref.current = v)}
+        ref={v => (ref.current = v)}
         responsive={[
           {
             breakpoint: 975,
@@ -48,12 +48,12 @@ const Testimonial: FC = () => {
           },
         ]}
       >
-        {content.map((v) => (
+        {content.map(v => (
           <Card key={v.author} {...v} />
         ))}
       </Slider>
     </Wrapper>
-  );
-};
+  )
+}
 
-export default Testimonial;
+export default Testimonial

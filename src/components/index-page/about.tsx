@@ -1,9 +1,9 @@
-import { Link } from 'gatsby';
-import React, { FC } from 'react';
-import styled from 'styled-components';
+import { Link } from "gatsby"
+import React, { FC } from "react"
+import styled from "styled-components"
 
-import { useSiteMetadata } from '@hooks';
-import { iconArrow, goodTeam, bgCurveDesktop, bgCurveMobile } from '@images';
+import { useSiteMetadata } from "@hooks"
+import { iconArrow, goodTeam, bgCurveDesktop, bgCurveMobile } from "@images"
 
 const Wrapper = styled.section`
   align-items: center;
@@ -39,7 +39,7 @@ const Wrapper = styled.section`
       background-size: 150% 100%;
     }
   }
-`;
+`
 
 const Text = styled.div`
   flex: 0 0 55%;
@@ -49,9 +49,9 @@ const Text = styled.div`
   @media screen and (max-width: ${({ theme }) => theme.sizes.width.medium}) {
     order: 2;
   }
-`;
+`
 
-const Heading = styled.h2``;
+const Heading = styled.h2``
 
 const SubText = styled.p`
   font-size: 1.1em;
@@ -63,7 +63,7 @@ const SubText = styled.p`
   @media screen and (max-width: ${({ theme }) => theme.sizes.width.small}) {
     width: 100%;
   }
-`;
+`
 
 const StyledLink = styled(Link)`
   align-items: center;
@@ -78,14 +78,14 @@ const StyledLink = styled(Link)`
   &:visited {
     color: ${({ theme }) => theme.colors.alternate};
   }
-`;
+`
 
-const LinkImage = styled.img.attrs(() => ({ src: iconArrow, alt: '' }))`
+const LinkImage = styled.img.attrs(() => ({ src: iconArrow, alt: "" }))`
   display: inline-block;
   height: 1.4375em;
   margin: 0;
   padding: 0 0 0 0.4em;
-`;
+`
 
 const ImageWrapper = styled.figure`
   flex: 0 0 45%;
@@ -96,34 +96,38 @@ const ImageWrapper = styled.figure`
     margin-bottom: 6.25em;
     order: 1;
   }
-`;
+`
 
-const Image = styled.img.attrs(() => ({ src: goodTeam, alt: '' }))`
+const Image = styled.img.attrs(() => ({ src: goodTeam, alt: "" }))`
   width: 100%;
-`;
+`
 
 /** About section details more information about the web site. */
 const About: FC = () => {
-  const siteMetadata = useSiteMetadata();
+  const siteMetadata = useSiteMetadata()
 
   return (
     <Wrapper>
       <Text>
-        <Heading>Create awesome stuff, together</Heading>
+        <Heading>Help us saving Axolotls, together</Heading>
 
         <SubText>
-          Never let location be an issue when finding someone to work with on a
-          project. Project Unicorn has a cool community of developers excited
-          about working together.
+          Are you a fan of Axolotls? Then this is the correct place for you!
+          Every now and then we go out together to save those little guy, so
+          show up and be part of the team too!
         </SubText>
 
         <SubText>
-          Work with awesome people from all parts of the world. Share, inspire,
-          and build your ideas!
+          Mollit veniam mollit deserunt commodo eiusmod proident magna pariatur
+          aliquip sint fugiat. Labore adipisicing minim ipsum in. Do sunt ex
+          voluptate irure. Quis sint cillum non eiusmod enim magna est.
         </SubText>
 
-        <StyledLink to="/projects" title={`${siteMetadata.title} projects`}>
-          See projects by members
+        <StyledLink
+          to="/achievements"
+          title={`${siteMetadata.title} achievements`}
+        >
+          See all our achievements
           <LinkImage />
         </StyledLink>
       </Text>
@@ -132,7 +136,7 @@ const About: FC = () => {
         <Image />
       </ImageWrapper>
     </Wrapper>
-  );
-};
+  )
+}
 
-export default About;
+export default About
