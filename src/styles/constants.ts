@@ -1,0 +1,25 @@
+export const black = 'hsla(0, 0%, 0%, 1)' as const;
+export const blackOff = 'hsla(0, 0%, 7%, 1)' as const;
+export const shadow = 'hsla(0, 0%, 0%, 0.1)' as const;
+export const transparent = 'hsla(0, 0%, 0%, 0)' as const;
+export const white = 'hsla(0, 100%, 100%, 1)' as const;
+
+export const blueLight = 'hsla(218, 64%, 62%, 1)' as const;
+export const blueLightAlt = 'hsl(240, 64%, 98%)' as const;
+export const greenLight = 'hsla(146, 78%, 31%, 1)' as const;
+export const greyLight = 'hsla(0, 0%, 95%, 1)' as const;
+export const greyLighter = 'lightgray' as const;
+export const greyLightAlt = 'hsla(0, 0%, 0%, 0.73)' as const;
+export const greyLightSecondary = '#f5f5fc' as const;
+export const greyMedium = 'hsla(0, 0%, 91%, 1)' as const;
+export const greyDark = 'hsla(0, 0%, 50%, 1)' as const;
+export const purpleMedium = 'hsla(276, 78%, 25%, 1)' as const;
+export const purpleLight = 'hsla(276, 97%, 38%, 1)' as const;
+export const purpleLighter = 'hsla(276, 56%, 52%, 1)' as const;
+export const primaryMedium = '#486ca8' as const;
+export const primaryLight = '#5f8ddc' as const;
+export const primaryLighter = '#a4bbe1' as const;
+export const pinkLight = '#ff6584' as const;
+export const pinkMedium = '#e84450' as const;
+export const red = '#de1f1f' as const;
+export const redLight = '#fff1f4' as const;

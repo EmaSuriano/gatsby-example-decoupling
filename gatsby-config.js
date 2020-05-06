@@ -1,9 +1,9 @@
+const { pathPrefix, manifestOptions, siteMetadata } = require("./site.config")
+
 module.exports = {
-  siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
-  },
+  siteMetadata,
+  pathPrefix,
+
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
@@ -17,18 +17,33 @@ module.exports = {
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
+      options: manifestOptions,
+    },
+    {
+      resolve: "gatsby-plugin-alias-imports",
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
-        start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        alias: {
+          "@components": "src/components",
+          "@hooks": "src/hooks",
+          "@images": "src/images",
+          "@pages": "src/pages",
+          "@styles": "src/styles",
+          "@templates": "src/templates",
+          "@utils": "src/utils",
+          "@static": "static",
+        },
+        extensions: ["ts", "tsx", "png", "jpg", "jpeg", "gif"],
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    {
+      resolve: "gatsby-plugin-typography",
+      options: {
+        pathToConfigModule: "src/styles/typography",
+        omitGoogleFont: true,
+      },
+    },
+    "gatsby-plugin-offline",
+    "gatsby-plugin-styled-components",
+    "gatsby-plugin-typescript",
   ],
 }

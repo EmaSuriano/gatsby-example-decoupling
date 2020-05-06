@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "esnext",
+    "lib": ["dom", "esnext"],
+    "strict": true,
+    "noEmit": true,
+    "skipLibCheck": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "noUnusedLocals": false,
+    "resolveJsonModule": true,
+    "jsx": "preserve",
+    "baseUrl": ".",
+    "paths": {
+      "@components": ["./src/components/index"],
+      "@components/*": ["./src/components/*"],
+      "@hooks": ["./src/hooks/index"],
+      "@hooks/*": ["./src/hooks/*"],
+      "@images": ["./src/images/index"],
+      "@images/*": ["./src/images/*"],
+      "@pages": ["./src/pages/index"],
+      "@pages/*": ["./src/pages/*"],
+      "@styles": ["./src/styles/index"],
+      "@styles/*": ["./src/styles/*"],
+      "@templates": ["./src/templates/index"],
+      "@templates/*": ["./src/templates/*"],
+      "@utils": ["./src/utils/index"],
+      "@utils/*": ["./src/utils/*"],
+      "@static/*": ["./static/*"]
+    }
+  },
+  "exclude": ["node_modules", "public", ".cache"]
+}
