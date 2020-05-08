@@ -97,6 +97,15 @@ module.exports = {
       },
     },
     "gatsby-transformer-yaml",
+
+    // achievements
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        path: `${__dirname}/achievements`,
+        name: "achievements",
+      },
+    },
   ],
   // blog auch
   mapping: {

@@ -1,12 +1,12 @@
-import { graphql, useStaticQuery } from 'gatsby';
-import { FluidObject } from 'gatsby-image';
+import { graphql, useStaticQuery } from "gatsby"
+import { FluidObject } from "gatsby-image"
 
 interface DefaultImage {
   file: {
     childImageSharp: {
-      fluid: FluidObject;
-    };
-  };
+      fluid: FluidObject
+    }
+  }
 }
 
 const defaultAvatarImageQuery = graphql`
@@ -19,10 +19,10 @@ const defaultAvatarImageQuery = graphql`
       }
     }
   }
-`;
+`
 
 export const useDefaultAvatarImage = () => {
-  const { file }: DefaultImage = useStaticQuery(defaultAvatarImageQuery);
+  const { file }: DefaultImage = useStaticQuery(defaultAvatarImageQuery)
 
-  return file;
-};
+  return file
+}
