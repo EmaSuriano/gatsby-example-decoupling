@@ -111,54 +111,21 @@ const Footer: FC = () => {
         <Text>{siteMetadata.description}</Text>
       </Col>
 
+      <Col />
+
       <Col>
         <List>
-          <ListItem>
-            <StyledLink to="/about" title={`${siteMetadata.title} about page`}>
-              About Us
-            </StyledLink>
-          </ListItem>
-          <ListItem>
-            <StyledLink
-              to="/sponsor"
-              title={`${siteMetadata.title} sponsor page`}
-            >
-              Sponsor
-            </StyledLink>
-          </ListItem>
           <ListItem>
             <StyledLink to="/blog" title={`${siteMetadata.title} blog`}>
               Blog
             </StyledLink>
           </ListItem>
-        </List>
-      </Col>
-
-      <Col>
-        <List>
           <ListItem>
             <StyledLink
-              to="/contact"
-              title={`${siteMetadata.title} contact page`}
+              to="/achievements"
+              title={`${siteMetadata.title} achievements page`}
             >
-              Contact us
-            </StyledLink>
-          </ListItem>
-          <ListItem>
-            <StyledLink
-              to="/terms"
-              title={`${siteMetadata.title} terms and conditions`}
-            >
-              Terms
-            </StyledLink>
-          </ListItem>
-
-          <ListItem>
-            <StyledLink
-              to="/privacy"
-              title={`${siteMetadata.title} privacy policy`}
-            >
-              Privacy
+              Achievements
             </StyledLink>
           </ListItem>
         </List>
