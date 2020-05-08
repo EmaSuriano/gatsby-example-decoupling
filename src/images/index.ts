@@ -1,6 +1,6 @@
 export { default as bgCurveDesktop } from "./bg-curve-desktop.svg"
 export { default as bgCurveMobile } from "./bg-curve-mobile.svg"
-export { default as landing } from "./ecology_monochromatic.svg"
+export { default as landing } from "./axolotl.png"
 export { default as defaultProfileImage } from "./default.png"
 export { default as defaultAvatarImage } from "./default-avatar-image.png"
 export { default as defaultPostImage } from "./default-post-image.jpg"

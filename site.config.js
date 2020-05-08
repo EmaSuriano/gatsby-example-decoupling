@@ -2,8 +2,8 @@ const path = require("path")
 
 module.exports = Object.freeze({
   pathPrefix: "/",
-  postsPerFirstPage: 6,
-  postsPerPage: 6,
+  postsPerFirstPage: 3,
+  postsPerPage: 3,
   siteMetadata: {
     title: "AxoCare NGO",
     titleShort: "AC",
