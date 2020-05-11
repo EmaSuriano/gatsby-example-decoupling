@@ -1,19 +1,19 @@
-import styled from 'styled-components';
+import styled from "styled-components"
 
-import { theme } from '@styles';
+import { theme } from "../styles"
 
 interface RibbonProps {
-  type: string;
+  type: string
 }
 
 interface RibbonColors {
-  [key: string]: string;
+  [key: string]: string
 }
 
 const ribbonColors: RibbonColors = {
   success: theme.colors.alert.success,
   danger: theme.colors.alert.danger,
-};
+}
 
 export const Ribbon = styled.div`
   background: ${(p: RibbonProps) => ribbonColors[p.type]};
@@ -27,7 +27,7 @@ export const Ribbon = styled.div`
   text-align: center;
   font-size: 16px;
   z-index: 99999;
-`;
+`
 
 export const CloseButton = styled.span`
   position: absolute;
@@ -37,4 +37,4 @@ export const CloseButton = styled.span`
   :hover {
     cursor: pointer;
   }
-`;
+`

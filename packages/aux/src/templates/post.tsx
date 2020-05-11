@@ -3,12 +3,12 @@ import { FluidObject } from "gatsby-image"
 import React, { FC } from "react"
 
 import { Hero, PostLinks, PostMeta, PostTags, Share } from "@components/blog"
-import { Container, Layout, PageBody, Seo } from "@components/shared"
+import { Container, Layout, PageBody, Seo } from "gatsby-shared/src/components"
 import {
   useDefaultAvatarImage,
   useDefaultPostImage,
   useSiteMetadata,
-} from "@hooks"
+} from "gatsby-shared/src/hooks"
 
 export interface PostNode {
   id: string

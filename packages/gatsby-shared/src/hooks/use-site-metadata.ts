@@ -33,6 +33,7 @@ const siteMetadataQuery = graphql`
 `
 
 export const useSiteMetadata = () => {
+  debugger
   const { site }: Data = useStaticQuery(siteMetadataQuery)
 
   return site.siteMetadata

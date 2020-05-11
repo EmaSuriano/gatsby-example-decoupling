@@ -1,5 +1,7 @@
 const { pathPrefix, manifestOptions, siteMetadata } = require("./site.config")
 
+const SHARED_FOLDER = `../gatsby-shared/src`
+
 module.exports = {
   siteMetadata,
   pathPrefix,
@@ -10,7 +12,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
+        path: `${SHARED_FOLDER}/images`,
       },
     },
     `gatsby-transformer-sharp`,
@@ -38,7 +40,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-typography",
       options: {
-        pathToConfigModule: "src/styles/typography",
+        pathToConfigModule: "../gatsby-shared/src/styles/typography",
         omitGoogleFont: true,
       },
     },

@@ -1,36 +1,36 @@
-import React, { FC } from 'react';
-import { Helmet } from 'react-helmet';
+import React, { FC } from "react"
+import { Helmet } from "react-helmet"
 
-import { useDefaultPostImage, useSiteMetadata } from '@hooks';
+import { useDefaultPostImage, useSiteMetadata } from "../hooks"
 
 interface Meta {
-  content: string;
-  name: string;
+  content: string
+  name: string
 }
 
 interface SeoProps {
   /** The document title. */
-  title: string;
+  title: string
   /** The URL path. */
-  urlSlug?: string;
+  urlSlug?: string
   /** Description of the document. */
-  description?: string;
+  description?: string
   /** Keywords for the document.  */
-  keywords?: string[];
+  keywords?: string[]
   /** Language of the document. */
-  lang?: string;
+  lang?: string
   /** Additional information for crawlers. */
-  meta?: Meta[];
+  meta?: Meta[]
   /** Twitter handle related to the content. */
-  twitter?: string;
+  twitter?: string
   /** The author of the contents. */
-  author?: string;
+  author?: string
   /** A URL for an image to be used when sharing. */
-  image?: string;
+  image?: string
   /** Another additional information used when sharing. */
-  pageType?: 'website' | 'article';
+  pageType?: "website" | "article"
   /** Publised date formatted as an ISO 8601 date. */
-  publishedAt?: string;
+  publishedAt?: string
 }
 
 /**
@@ -39,23 +39,23 @@ interface SeoProps {
  */
 const Seo: FC<SeoProps> = ({
   title,
-  urlSlug = '',
+  urlSlug = "",
   description,
   keywords = [],
-  lang = 'en',
+  lang = "en",
   meta = [],
   twitter,
   author,
   image,
-  pageType = 'website',
+  pageType = "website",
   publishedAt,
 }) => {
-  const defaultPostImage = useDefaultPostImage();
-  const siteMetadata = useSiteMetadata();
-  const metaDescription = description || siteMetadata.description;
-  const pageUrl = `${siteMetadata.siteUrl}/${urlSlug}`;
+  const defaultPostImage = useDefaultPostImage()
+  const siteMetadata = useSiteMetadata()
+  const metaDescription = description || siteMetadata.description
+  const pageUrl = `${siteMetadata.siteUrl}/${urlSlug}`
   const pageImage =
-    image || siteMetadata.siteUrl + defaultPostImage.childImageSharp.fluid.src;
+    image || siteMetadata.siteUrl + defaultPostImage.childImageSharp.fluid.src
 
   return (
     <Helmet
@@ -65,88 +65,88 @@ const Seo: FC<SeoProps> = ({
       meta={[
         {
           content: author || siteMetadata.title,
-          name: 'author',
+          name: "author",
         },
         {
           content: metaDescription,
-          name: 'description',
+          name: "description",
         },
         {
           content: pageImage,
-          property: 'og:image',
+          property: "og:image",
         },
         {
           content: metaDescription,
-          property: 'og:description',
+          property: "og:description",
         },
         {
           content: pageUrl,
-          property: 'og:url',
+          property: "og:url",
         },
         {
-          content: 'en',
-          property: 'og:locale',
+          content: "en",
+          property: "og:locale",
         },
         {
           content: siteMetadata.title,
-          property: 'og:site_name',
+          property: "og:site_name",
         },
         {
           content: title,
-          property: 'og:title',
+          property: "og:title",
         },
         {
           content: pageType,
-          property: 'og:type',
+          property: "og:type",
         },
         {
           content: publishedAt,
-          property: 'article:published_time',
+          property: "article:published_time",
         },
         {
           content: keywords[0] || siteMetadata.title,
-          property: 'article:tag',
+          property: "article:tag",
         },
         {
-          content: 'summary_large_image',
-          name: 'twitter:card',
+          content: "summary_large_image",
+          name: "twitter:card",
         },
         {
           content: siteMetadata.social.twitter,
-          name: 'twitter:site',
+          name: "twitter:site",
         },
         {
           content: twitter || siteMetadata.social.twitter,
-          name: 'twitter:creator',
+          name: "twitter:creator",
         },
         {
           content: title,
-          name: 'twitter:title',
+          name: "twitter:title",
         },
         {
           content: pageUrl,
-          name: 'twitter:url',
+          name: "twitter:url",
         },
         {
           content: pageImage,
-          name: 'twitter:image',
+          name: "twitter:image",
         },
         {
           content: metaDescription,
-          name: 'twitter:description',
+          name: "twitter:description",
         },
       ]
         .concat(
           keywords.length > 0
             ? {
-                content: keywords.join(', '),
-                name: 'keywords',
+                content: keywords.join(", "),
+                name: "keywords",
               }
-            : [],
+            : []
         )
         .concat(meta)}
     />
-  );
-};
+  )
+}
 
-export default Seo;
+export default Seo

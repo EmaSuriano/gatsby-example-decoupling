@@ -1,23 +1,23 @@
-import { Link } from 'gatsby';
-import React, { FC } from 'react';
-import styled from 'styled-components';
+import { Link } from "gatsby"
+import React, { FC } from "react"
+import styled from "styled-components"
 
-import { useSiteMetadata } from '@hooks';
+import { useSiteMetadata } from "gatsby-shared/src/hooks"
 
 interface PaginationProps {
   /** Contains information about the page. */
   context: {
-    tag?: string;
-    slug?: string;
-    limit?: number;
-    skip?: number;
+    tag?: string
+    slug?: string
+    limit?: number
+    skip?: number
     /** The total number of pages based on the `POST_PER_PAGE` constant. */
-    numPages?: number;
+    numPages?: number
     /** The current page. */
-    currentPage?: number;
-  };
+    currentPage?: number
+  }
   /** The prefix for the paths to be used in the next and previous links. */
-  prefix?: string;
+  prefix?: string
 }
 
 const Wrapper = styled.div`
@@ -45,17 +45,17 @@ const Wrapper = styled.div`
       }
     }
   }
-`;
+`
 
 const PreviousLink = styled(Link)`
   margin-right: auto;
   order: 1;
-`;
+`
 
 const NextLink = styled(Link)`
   margin-left: auto;
   order: 3;
-`;
+`
 
 const PageIndicator = styled.span`
   color: ${({ theme }) => theme.colors.text};
@@ -67,25 +67,25 @@ const PageIndicator = styled.span`
   padding: 1em 1.5em;
   z-index: -1;
   opacity: 0.7;
-`;
+`
 
 /**
  * Displays a page indicator to show the current page compared to the total page
  * and links to the next and previous page.
  */
 const Pagination: FC<PaginationProps> = ({ context, prefix }) => {
-  const siteMetadata = useSiteMetadata();
-  const { numPages, currentPage = 1 } = context;
-  const isFirst = currentPage === 1;
-  const isLast = currentPage === numPages;
-  const isNotPaginated = isFirst && isLast;
+  const siteMetadata = useSiteMetadata()
+  const { numPages, currentPage = 1 } = context
+  const isFirst = currentPage === 1
+  const isLast = currentPage === numPages
+  const isNotPaginated = isFirst && isLast
 
-  const prevPageNum = currentPage - 1 === 1 ? `` : currentPage - 1;
-  const nextPageNum = currentPage + 1;
+  const prevPageNum = currentPage - 1 === 1 ? `` : currentPage - 1
+  const nextPageNum = currentPage + 1
 
-  const pathPrefix = prefix ? `/${prefix}/` : '/';
-  const prevPageLink = isFirst ? null : `${pathPrefix}${prevPageNum}/`;
-  const nextPageLink = isLast ? null : `${pathPrefix}${nextPageNum}/`;
+  const pathPrefix = prefix ? `/${prefix}/` : "/"
+  const prevPageLink = isFirst ? null : `${pathPrefix}${prevPageNum}/`
+  const nextPageLink = isLast ? null : `${pathPrefix}${nextPageNum}/`
 
   return (
     <Wrapper>
@@ -113,7 +113,7 @@ const Pagination: FC<PaginationProps> = ({ context, prefix }) => {
         </NextLink>
       )}
     </Wrapper>
-  );
-};
+  )
+}
 
-export default Pagination;
+export default Pagination

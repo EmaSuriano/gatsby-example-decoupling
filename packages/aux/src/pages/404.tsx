@@ -2,9 +2,9 @@ import { Link } from "gatsby"
 import React, { FC } from "react"
 import styled from "styled-components"
 
-import { Container, Layout, PageTitle, Seo } from "@components/shared"
-import { notFound } from "@images"
-import { useSiteMetadata } from "@hooks"
+import { Container, Layout, PageTitle, Seo } from "gatsby-shared/src/components"
+import { notFound } from "gatsby-shared/src/images"
+import { useSiteMetadata } from "gatsby-shared/src/hooks"
 
 const Text = styled.p`
   text-align: center;

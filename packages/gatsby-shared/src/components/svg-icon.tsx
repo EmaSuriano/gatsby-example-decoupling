@@ -1,12 +1,12 @@
-import React, { FC, SVGProps } from 'react';
+import React, { FC, SVGProps } from "react"
 
-import { styleLengths } from '@utils';
+import { styleLengths } from "../utils"
 
 interface OwnProps {
-  [index: string]: unknown;
+  [index: string]: unknown
 }
 
-type SvgIconProps = OwnProps & SVGProps<SVGSVGElement>;
+type SvgIconProps = OwnProps & SVGProps<SVGSVGElement>
 
 /** Displays an SVG element where its size can be configured via `fontSize`. */
 const SvgIcon: FC<SvgIconProps> = ({ fontSize, children, ...svgProps }) => {
@@ -20,7 +20,7 @@ const SvgIcon: FC<SvgIconProps> = ({ fontSize, children, ...svgProps }) => {
     >
       {children}
     </svg>
-  );
-};
+  )
+}
 
-export default SvgIcon;
+export default SvgIcon

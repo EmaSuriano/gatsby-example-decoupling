@@ -1,19 +1,19 @@
-import { Link } from 'gatsby';
-import React, { FC } from 'react';
-import styled from 'styled-components';
+import { Link } from "gatsby"
+import React, { FC } from "react"
+import styled from "styled-components"
 
-import { slugify } from '@utils';
+import { slugify } from "gatsby-shared/src/utils"
 
 interface PostTagsProps {
   /** A list of tags. */
-  tags: string[];
+  tags: string[]
 }
 
 const List = styled.ul`
   width: 100%;
   margin: 0 auto 1em auto;
   max-width: ${({ theme }) => theme.sizes.width.maxCentered};
-`;
+`
 
 const Tag = styled.li`
   display: inline-block;
@@ -38,12 +38,12 @@ const Tag = styled.li`
       }
     }
   }
-`;
+`
 
 /** Displays a row of tags for the current blog post. */
 const PostTags: FC<PostTagsProps> = ({ tags }) => (
   <List>
-    {tags.map((tag) => (
+    {tags.map(tag => (
       <Tag key={tag}>
         <Link
           to={`/blog/tag/${slugify(tag)}/`}
@@ -54,6 +54,6 @@ const PostTags: FC<PostTagsProps> = ({ tags }) => (
       </Tag>
     ))}
   </List>
-);
+)
 
-export default PostTags;
+export default PostTags

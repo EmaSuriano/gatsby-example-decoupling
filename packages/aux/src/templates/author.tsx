@@ -3,12 +3,12 @@ import { FluidObject } from "gatsby-image"
 import React, { FC } from "react"
 
 import { AuthorMeta, Card, CardList, Pagination } from "@components/blog"
-import { Container, Layout, Seo } from "@components/shared"
+import { Container, Layout, Seo } from "gatsby-shared/src/components"
 import {
   useDefaultAvatarImage,
   useDefaultPostImage,
   useSiteMetadata,
-} from "@hooks"
+} from "gatsby-shared/src/hooks"
 
 export interface Author {
   /** Unique ID of the author. */

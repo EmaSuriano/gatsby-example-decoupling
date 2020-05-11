@@ -1,13 +1,13 @@
-import React, { FC } from 'react';
-import styled from 'styled-components';
+import React, { FC } from "react"
+import styled from "styled-components"
 
-import { Avatar } from '@components/blog';
-import { SocialIcon } from '@components/shared';
-import { Author } from '@templates/author';
+import { Avatar } from "@components/blog"
+import { SocialIcon } from "gatsby-shared/src/components"
+import { Author } from "@templates/author"
 
 interface AuthorMetaProps {
   /** The object containing details about an author. */
-  author: Author;
+  author: Author
 }
 
 const Wrapper = styled.div`
@@ -33,15 +33,15 @@ const Wrapper = styled.div`
       }
     }
   }
-`;
+`
 
 const SocialAccounts = styled.div`
   display: flex;
-`;
+`
 
 const Name = styled.h2`
   margin: 1em 0 0.5em;
-`;
+`
 
 /** Displays details about an author. */
 const AuthorMeta: FC<AuthorMetaProps> = ({
@@ -77,6 +77,6 @@ const AuthorMeta: FC<AuthorMetaProps> = ({
       )}
     </SocialAccounts>
   </Wrapper>
-);
+)
 
-export default AuthorMeta;
+export default AuthorMeta

@@ -1,10 +1,10 @@
-import React, { FC } from 'react';
-import styled from 'styled-components';
+import React, { FC } from "react"
+import styled from "styled-components"
 
-import { Button } from '@components/shared/buttons';
+import { Button } from "@components/buttons"
 
 interface OwnProps {
-  onClick?: Function;
+  onClick?: Function
 }
 
 const NavMenuButton = styled(Button)`
@@ -18,14 +18,14 @@ const NavMenuButton = styled(Button)`
   @media screen and (max-width: ${({ theme }) => theme.sizes.width.smallest}) {
     padding: 2px 6px;
   }
-`;
+`
 
 const NavButton: FC<OwnProps> = ({ onClick, children }) => {
   return (
-    <NavMenuButton onClick={(e) => (onClick ? onClick(e) : '')}>
+    <NavMenuButton onClick={e => (onClick ? onClick(e) : "")}>
       {children}
     </NavMenuButton>
-  );
-};
+  )
+}
 
-export default NavButton;
+export default NavButton

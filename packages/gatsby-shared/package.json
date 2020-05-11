@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-aux",
+  "name": "gatsby-shared",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Shared components and utils",
   "version": "0.0.0",
   "author": "Ema Suriano <emanuel.suriano@gmail.com>",
   "dependencies": {
@@ -34,8 +34,7 @@
     "react-typography": "^0.16.19",
     "styled-components": "^5.1.0",
     "typography": "^0.16.19",
-    "typography-theme-ocean-beach": "^0.16.19",
-    "gatsby-shared": "*"
+    "typography-theme-ocean-beach": "^0.16.19"
   },
   "devDependencies": {
     "@types/react-helmet": "^5.0.15",
@@ -47,14 +46,6 @@
     "gatsby"
   ],
   "license": "MIT",
-  "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/EmaSuriano/gatsby-example-decoupling"

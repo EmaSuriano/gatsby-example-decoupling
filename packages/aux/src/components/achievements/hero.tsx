@@ -1,6 +1,6 @@
 import React, { FC } from "react"
 import styled from "styled-components"
-import { useSiteMetadata } from "@hooks"
+import { useSiteMetadata } from "gatsby-shared/src/hooks"
 
 const Wrapper = styled.header`
   padding: ${({ theme }) => theme.boxes.padding.section.medium};

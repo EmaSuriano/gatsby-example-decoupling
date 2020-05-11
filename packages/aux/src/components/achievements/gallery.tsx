@@ -1,7 +1,7 @@
 import React, { FC, useState, useCallback } from "react"
 import Gallery from "react-photo-gallery"
 import Carousel, { Modal, ModalGateway } from "react-images"
-import { useAchievements } from "@hooks"
+import { useAchievements } from "gatsby-shared/src/hooks"
 
 const Hero: FC = () => {
   const achievements = useAchievements()

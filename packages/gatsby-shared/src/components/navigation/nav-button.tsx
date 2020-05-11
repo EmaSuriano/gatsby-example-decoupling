@@ -1,6 +1,6 @@
-import styled from 'styled-components';
+import styled from "styled-components"
 
-import { Button } from '@components/shared/buttons';
+import { Button } from "gatsby-shared/src/components/buttons"
 
 const NavButton = styled(Button)`
   background: ${({ theme }) => theme.colors.highlight};
@@ -14,6 +14,6 @@ const NavButton = styled(Button)`
   @media screen and (max-width: ${({ theme }) => theme.sizes.width.smallest}) {
     padding: 2px 6px;
   }
-`;
+`
 
-export default NavButton;
+export default NavButton

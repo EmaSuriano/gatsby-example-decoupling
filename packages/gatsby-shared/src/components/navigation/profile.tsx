@@ -2,7 +2,7 @@ import { navigate } from "gatsby"
 import React, { FC, useState, useRef } from "react"
 import styled from "styled-components"
 
-import { dotIcon } from "@images"
+import { dotIcon } from "../../images"
 
 interface OwnProps {
   content: string

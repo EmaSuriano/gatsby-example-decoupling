@@ -1,16 +1,16 @@
-import { Link } from 'gatsby';
-import React, { FC } from 'react';
-import styled from 'styled-components';
+import { Link } from "gatsby"
+import React, { FC } from "react"
+import styled from "styled-components"
 
-import { Avatar } from '@components/blog';
-import { SocialIcon } from '@components/shared';
-import { Author } from '@templates/post';
+import { Avatar } from "@components/blog"
+import { SocialIcon } from "gatsby-shared/src/components"
+import { Author } from "@templates/post"
 
 interface PostMetaProps {
   /** The published date for a blog post. */
-  date: string;
+  date: string
   /** Contains details for the author of the current blog post. */
-  author: Author;
+  author: Author
 }
 
 const Wrapper = styled.div`
@@ -19,12 +19,12 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-`;
+`
 
 const Body = styled.div`
   flex: 1;
   color: ${({ theme }) => theme.colors.text};
-`;
+`
 
 const Header = styled.header`
   display: inline-flex;
@@ -52,7 +52,7 @@ const Header = styled.header`
       }
     }
   }
-`;
+`
 
 const AuthorLink = styled(Link)`
   font-weight: 600;
@@ -70,11 +70,11 @@ const AuthorLink = styled(Link)`
       color: ${({ theme }) => theme.colors.highlight};
     }
   }
-`;
+`
 
 const Bio = styled.p`
   margin: 0;
-`;
+`
 
 /** Displays details about a blog post. */
 const PostMeta: FC<PostMetaProps> = ({
@@ -112,6 +112,6 @@ const PostMeta: FC<PostMetaProps> = ({
       Published on {date}
     </Body>
   </Wrapper>
-);
+)
 
-export default PostMeta;
+export default PostMeta

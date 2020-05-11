@@ -1,4 +1,5 @@
 const path = require("path")
+const logoPath = `../gatsby-shared/src/images/logo.png`
 
 module.exports = Object.freeze({
   pathPrefix: "/",
@@ -11,7 +12,7 @@ module.exports = Object.freeze({
     description:
       "AxoCare is the first fake NGO to save Axolotl from extinction.",
     siteUrl: "http://localhost:8000",
-    logo: path.resolve(__dirname, "src/images/logo.png"),
+    logo: logoPath,
     author: "EmaSuriano",
     social: {
       twitter: "@emasuriano",
@@ -24,6 +25,6 @@ module.exports = Object.freeze({
     background_color: "#ffffff",
     theme_color: "#ffffff",
     display: "minimal-ui",
-    icon: "src/images/logo.png",
+    icon: logoPath,
   },
 })

@@ -3,8 +3,8 @@ import { FluidObject } from "gatsby-image"
 import React, { FC } from "react"
 
 import { Card, CardList, Pagination } from "@components/blog"
-import { Container, Layout, Seo } from "@components/shared"
-import { useDefaultPostImage, useSiteMetadata } from "@hooks"
+import { Container, Layout, Seo } from "gatsby-shared/src/components"
+import { useDefaultPostImage, useSiteMetadata } from "gatsby-shared/src/hooks"
 
 interface PostNode {
   excerpt: string

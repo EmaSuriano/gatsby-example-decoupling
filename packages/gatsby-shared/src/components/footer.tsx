@@ -2,9 +2,9 @@ import { Link } from "gatsby"
 import React, { ChangeEvent, FC, FormEvent, useState } from "react"
 import styled, { css } from "styled-components"
 
-import { Button } from "@components/shared/buttons"
-import { puAlt } from "@images"
-import { useSiteMetadata } from "@hooks"
+import { Button } from "./buttons"
+import { puAlt } from "../images"
+import { useSiteMetadata } from "../hooks"
 
 const Wrapper = styled.footer`
   background: ${({ theme }) => theme.colors.base};

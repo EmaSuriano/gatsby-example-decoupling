@@ -2,8 +2,8 @@ import React, { FC } from "react"
 import { Helmet } from "react-helmet"
 
 import { Hero, About, Faq, Testimonial } from "@components/index-page"
-import { Layout } from "@components/shared"
-import { useSiteMetadata } from "@hooks"
+import { Layout } from "gatsby-shared/src/components"
+import { useSiteMetadata } from "gatsby-shared/src/hooks"
 
 /** The website's landing page. */
 const IndexPage: FC = () => {

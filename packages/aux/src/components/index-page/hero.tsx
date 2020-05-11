@@ -1,8 +1,8 @@
 import React, { FC } from "react"
 import styled from "styled-components"
 
-import { useSiteMetadata } from "@hooks"
-import { landing } from "@images"
+import { useSiteMetadata } from "gatsby-shared/src/hooks"
+import { landing } from "gatsby-shared/src/images"
 
 const Wrapper = styled.header`
   align-items: center;

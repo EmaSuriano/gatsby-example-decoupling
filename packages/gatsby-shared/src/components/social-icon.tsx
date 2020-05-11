@@ -1,7 +1,7 @@
 import React, { FC, SVGProps } from "react"
 import styled from "styled-components"
 
-import { Anchor, SvgIcon } from "@components/shared"
+import { Anchor, SvgIcon } from "."
 
 export type SocialName =
   | "facebook"

@@ -12,9 +12,9 @@ import {
   Show,
   Footer,
   Sidebar,
-} from "@components/shared"
-import { useScrollPosition } from "@hooks"
-import { theme } from "@styles"
+} from ".."
+import { useScrollPosition } from "gatsby-shared/src/hooks"
+import { theme } from "gatsby-shared/src/styles"
 
 interface OwnProps {
   navItems?: NavItem[]

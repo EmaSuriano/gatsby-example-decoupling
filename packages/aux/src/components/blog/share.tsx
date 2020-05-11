@@ -1,27 +1,27 @@
-import React, { FC } from 'react';
-import styled from 'styled-components';
+import React, { FC } from "react"
+import styled from "styled-components"
 
-import { SocialIcon } from '@components/shared';
-import { useSiteMetadata } from '@hooks';
-import { makeShareUrl } from '@utils';
+import { SocialIcon } from "gatsby-shared/src/components"
+import { useSiteMetadata } from "gatsby-shared/src/hooks"
+import { makeShareUrl } from "gatsby-shared/src/utils"
 
 interface ShareProps {
   /** Contains information about a blog post. */
   post: {
     /** The title of the blog post. */
-    title: string;
+    title: string
     /** The URL path. */
-    slug: string;
+    slug: string
     /** A short preview of the blog post. */
-    excerpt: string;
-  };
+    excerpt: string
+  }
 }
 
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-`;
+`
 
 const List = styled.div`
   max-width: ${({ theme }) => theme.sizes.width.maxCentered};
@@ -49,17 +49,17 @@ const List = styled.div`
       }
     }
   }
-`;
+`
 
 const Label = styled.p`
   font-weight: 800;
-`;
+`
 
 /** Displays icons that link to social sites' share endpoints. */
 const Share: FC<ShareProps> = ({ post }) => {
-  const { social, siteUrl } = useSiteMetadata();
-  const twitterHandle = social.twitter.replace('@', '');
-  const postUrl = `${siteUrl}/blog/${post.slug}`;
+  const { social, siteUrl } = useSiteMetadata()
+  const twitterHandle = social.twitter.replace("@", "")
+  const postUrl = `${siteUrl}/blog/${post.slug}`
 
   return (
     <Wrapper>
@@ -70,13 +70,13 @@ const Share: FC<ShareProps> = ({ post }) => {
           link
           socialName="facebook"
           title={`Share "${post.title}" on Facebook`}
-          href={makeShareUrl('facebook', { u: postUrl })}
+          href={makeShareUrl("facebook", { u: postUrl })}
         />
         <SocialIcon
           link
           socialName="twitter"
           title={`Share "${post.title}" on Twitter`}
-          href={makeShareUrl('twitter', {
+          href={makeShareUrl("twitter", {
             text: post.title,
             url: postUrl,
             via: twitterHandle,
@@ -86,17 +86,17 @@ const Share: FC<ShareProps> = ({ post }) => {
           link
           socialName="linkedin"
           title={`Share "${post.title}" on LinkedIn`}
-          href={makeShareUrl('linkedin', { url: postUrl })}
+          href={makeShareUrl("linkedin", { url: postUrl })}
         />
         <SocialIcon
           link
           socialName="reddit"
           title={`Share "${post.title}" on Reddit`}
-          href={makeShareUrl('reddit', { url: postUrl })}
+          href={makeShareUrl("reddit", { url: postUrl })}
         />
       </List>
     </Wrapper>
-  );
-};
+  )
+}
 
-export default Share;
+export default Share

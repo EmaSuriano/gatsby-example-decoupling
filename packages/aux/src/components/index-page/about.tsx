@@ -2,8 +2,13 @@ import { Link } from "gatsby"
 import React, { FC } from "react"
 import styled from "styled-components"
 
-import { useSiteMetadata } from "@hooks"
-import { iconArrow, goodTeam, bgCurveDesktop, bgCurveMobile } from "@images"
+import { useSiteMetadata } from "gatsby-shared/src/hooks"
+import {
+  iconArrow,
+  goodTeam,
+  bgCurveDesktop,
+  bgCurveMobile,
+} from "gatsby-shared/src/images"
 
 const Wrapper = styled.section`
   align-items: center;
